@@ -123,6 +123,7 @@ public class LearnJava {
         String test = "";
         System.out.println(s1.compareTo(s2));
         
+        //Demos
         LinkyList.runFunc();
         DemoDeque.runFunc();
 
