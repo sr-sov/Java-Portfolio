@@ -12,7 +12,7 @@ public class RollDies {
         
         Random random = new Random();
 
-        System.out.println("\n\n*** THIS IS A GAME TO TEST YOUR LUCK ***\n You win if you manage to reach the end of the board in 5 die rolls.\n---");
+        System.out.println("\n\n*** THIS IS A GAME TO TEST YOUR LUCK ***\n You win if you manage to reach the end of the board(20 tiles) in 5 die rolls. The die rolls determine how much tiles you move per turn.\n---");
         while(position < board && rolls < 5)
         {
             die = random.nextInt(6) + 1;
