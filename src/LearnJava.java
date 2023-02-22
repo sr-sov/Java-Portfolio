@@ -90,6 +90,7 @@ public class LearnJava {
         System.out.println(s1.compareTo(s2));
         
         LinkyList.runFunc();
+        DemoDeque.runFunc();
 
     }
 
