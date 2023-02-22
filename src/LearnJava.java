@@ -4,37 +4,24 @@ import java.util.Arrays;
 
 public class LearnJava {
 
-    public static void mergeSort(int arr[], int n){
-        if (n < 2) return;
-
-        //[1,4,3,2,5]
-        //n=5
-        int mid = n/2;
-        //mid = 2
-        int l[] = new int[mid];//2
-        int r[] = new int[n - mid];//3
-
-        //copy elements into left subarray
-        for ( int i = 0; i < mid; i++){
-            l[i] = arr[i];
-            //[1,4]
+    public static void mergeSort(int[] a, int n) {
+        if (n < 2) {
+            return;
         }
-
-        //copy elements into r subarray
-        for ( int j = mid ; j < n; j++){
-            //j=2
-            r[j - mid] = arr[j];
-            //r[2-2] = arr[2] -> r[0] = arr[2]
-            //[3,2,5]
+        int mid = n / 2;
+        int[] l = new int[mid];
+        int[] r = new int[n - mid];
+    
+        for (int i = 0; i < mid; i++) {
+            l[i] = a[i];
         }
-
+        for (int i = mid; i < n; i++) {
+            r[i - mid] = a[i];
+        }
         mergeSort(l, mid);
         mergeSort(r, n - mid);
-
-        merge(arr, l, r, mid, n-mid);
-        System.out.println("merged");
-        
-
+    
+        merge(a, l, r, mid, n - mid);
     }
 
     public static void merge(
