@@ -83,6 +83,14 @@ public class LearnJava {
         mergeSort(actual, actual.length);
         System.out.println("Merged: "+Arrays.toString(actual));
 
+        String s1 = "H";
+        String s2 = "I";
+
+        String test = "";
+        System.out.println(s1.compareTo(s2));
+        
+        LinkyList.runFunc();
+
     }
 
     //method
