@@ -1,7 +1,9 @@
+package games;
 import java.util.Scanner;
 
+/* VARIABLES */
 public class FillBlanks {
-    public static void main(String[] args){
+    public static void run(){
         /* GET USER INPUT
          * SEASON OF THE YEAR
          * WHOLE NUMBER
