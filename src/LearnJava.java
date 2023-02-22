@@ -1,45 +1,49 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
 public class LearnJava {
 
-    public static void mergeSort(int[] a, int n) {
-        if (n < 2) {
-            return;
-        }
+    public static void mergeSort(int arr[], int n){
+        if (n < 2) 
+        {return;}
+
+        //[1,4,3,2,5]
+        //n=5
         int mid = n / 2;
         int[] l = new int[mid];
         int[] r = new int[n - mid];
-    
+
+        //copy elements into left subarray
         for (int i = 0; i < mid; i++) {
-            l[i] = a[i];
+            l[i] = arr[i];
         }
-        for (int i = mid; i < n; i++) {
-            r[i - mid] = a[i];
+
+        //copy elements into r subarray
+        for (int j = mid; j < n; j++) {
+            r[j - mid] = arr[j];
         }
         mergeSort(l, mid);
         mergeSort(r, n - mid);
     
-        merge(a, l, r, mid, n - mid);
+        merge(arr, l, r, mid, n - mid);
+
     }
 
-    public static void merge(
-        int[] a, int[] l, int[] r, int left, int right) {
-        
-            int i = 0, j = 0, k = 0;
-            while (i < left && j < right) {
-                if (l[i] <= r[j]) {
-                    a[k++] = l[i++];
-                }
-                else {
-                    a[k++] = r[j++];
-                }
-            }
-            while (i < left) {
+    public static void merge(int a[], int l[], int r[], int left, int right){
+
+        int i = 0, j = 0, k = 0;
+        while ( i < left && j < right ){
+            if (l[i] <= r[j]){
                 a[k++] = l[i++];
             }
-            while (j < right) {
+            else{
+                a[k++] = r[j++];
+            }
+        }
+            while(i<left){
+                a[k++] = l[i++];
+            }
+            while(j<right){
                 a[k++] = r[j++];
             }
     }
