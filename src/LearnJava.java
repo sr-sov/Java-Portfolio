@@ -1,7 +1,41 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import util.DemoDeque;
+import util.LinkyList;
+
 public class LearnJava {
+
+    //method
+    public static void printLowerCaps(String s){
+        //concatenation
+        System.out.println(s.toLowerCase() + "(lowercase)");
+    }
+    //method with return
+    public static String addString(String s){
+        return(s + "+ String");
+    }
+
+    public static void doStuff() {
+        //if two variables have the same name, priority is on local variable
+        int a = 5;
+        
+        
+        for(int i = 0; i<4 ; i++){
+            for(int j = 0; j<4; j++){
+                a++;
+                System.out.println(a);
+            }
+        }
+
+        //conditional statements
+        if(a<20){
+            System.out.println("Lower than 20.");
+        }
+        else{
+            System.out.println("Higher than 20.");
+        }
+    }
 
     public static void mergeSort(int arr[], int n){
         if (n < 2) 
@@ -94,34 +128,4 @@ public class LearnJava {
 
     }
 
-    //method
-    public static void printLowerCaps(String s){
-        //concatenation
-        System.out.println(s.toLowerCase() + "(lowercase)");
-    }
-    //method with return
-    public static String addString(String s){
-        return(s + "+ String");
-    }
-
-    public static void doStuff() {
-        //if two variables have the same name, priority is on local variable
-        int a = 5;
-        
-        
-        for(int i = 0; i<4 ; i++){
-            for(int j = 0; j<4; j++){
-                a++;
-                System.out.println(a);
-            }
-        }
-
-        //conditional statements
-        if(a<20){
-            System.out.println("Lower than 20.");
-        }
-        else{
-            System.out.println("Higher than 20.");
-        }
-    }
 }
