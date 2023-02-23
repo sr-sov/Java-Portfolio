@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 import util.DemoDeque;
 import util.LinkyList;
@@ -83,7 +84,7 @@ public class main {
         String test = "";
         System.out.println(s1.compareTo(s2));
         
-        //util demos
+        /* util demos */
         LinkyList.runFunc();
         DemoDeque.runFunc();
 
@@ -91,9 +92,24 @@ public class main {
             System.out.println("Word Count is 5. Congratulations!");
         }
 
+        //reverse a string
         String word = "Stop";
         System.out.println("Reversing the word \"" + word + "\".");
         System.out.println("Result of reverse function: " + StringManipulations.reverseString(word));
+
+        //password validation
+        Scanner scan = new Scanner(System.in);
+        String username = "Jhin";
+        String password = "artist_123";
+        System.out.println("Hi, " + username + "!\nChange your password: ");
+        String newPassword = scan.nextLine();
+        if(newPassword.length() != 0){
+            password = PasswordValidator.changePassword(username, password, newPassword);
+        }
+
+
+        scan.close();
+
 
     }
 
