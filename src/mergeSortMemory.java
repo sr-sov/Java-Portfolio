@@ -1,6 +1,6 @@
-public class mergeSort {
+public class mergeSortMemory {
     //take array and size
-    public static void mergeSort2(int[] arr, int n) {
+    public static void run(int[] arr, int n) {
         //base case
         if(n < 2){
             return;
@@ -20,11 +20,11 @@ public class mergeSort {
         }
 
         //split subarrays with recursive calls
-        mergeSort2(l, n);
-        mergeSort2(r, n-mid);
+        run(l, mid);
+        run(r, n-mid);
 
         //merge subarray
-        merge(arr, l, r, mid, mid-n);
+        merge(arr, l, r, mid, n - mid);
 
     }
     

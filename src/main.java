@@ -71,9 +71,11 @@ public class main {
         doStuff();
 
         //merge sort
-        int[] actual = { 5, 1, 6, 2, 3, 4 };
+        int[] actual = { 111, 5, 1, 6, 2, 3, 4, 77, 32};
         Sort.mergeSort(actual, actual.length);
         System.out.println("Merged: "+Arrays.toString(actual));
+        mergeSortMemory.run(actual, actual.length);
+        System.out.println("Merged #2: "+Arrays.toString(actual));
 
         String s1 = "H";
         String s2 = "I";
