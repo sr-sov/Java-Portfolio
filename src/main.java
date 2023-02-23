@@ -87,6 +87,14 @@ public class main {
         LinkyList.runFunc();
         DemoDeque.runFunc();
 
+        if(StringManipulations.countWords("There should be 5 words.\n")==5){
+            System.out.println("Word Count is 5. Congratulations!");
+        }
+
+        String word = "Stop";
+        System.out.println("Reversing the word \"" + word + "\".");
+        System.out.println("Result of reverse function: " + StringManipulations.reverseString(word));
+
     }
 
 }
